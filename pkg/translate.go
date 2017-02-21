@@ -3,7 +3,7 @@ package pkg
 import (
 	"errors"
 	"fmt"
-	"github.com/aerokite/google-translate/pkg/client"
+	"github.com/aerokite/google-translate-go/pkg/client"
 	"regexp"
 	"strings"
 )

@@ -4,7 +4,7 @@ import sys
 import subprocess
 from os.path import expandvars
 
-ROOT = expandvars('$GOPATH') + '/src/github.com/aerokite/google-translate/cmd'
+ROOT = expandvars('$GOPATH') + '/src/github.com/aerokite/google-translate-go/cmd'
 
 def call(cmd, stdin=None, cwd=ROOT):
     print('$ ' + cmd)
