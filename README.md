@@ -17,22 +17,22 @@ $ go get -u -v github.com/aerokite/go-google-translate/...
 # Usage
 ```go
 import (
-	translate "github.com/aerokite/go-google-translate/pkg"
+	trans "github.com/aerokite/go-google-translate/pkg"
 )
 
 // request struct
-req := &translate.TranslateRequest{
+req := &trans.TranslateRequest{
   SourceLang: "bn",
   TargetLang: "en",
   Text:       "আমি বাংলায় গান গাই",
 }
 // translate
-translated, err := translate.Translate(req)
+translatedText, err := trans.Translate(req)
 if err != nil {
   os.Stderr.WriteString("Failed to translate text, error" + err.Error())
 }
 
-fmt.Println(translated) // I sing in Bangla
+fmt.Println(translatedText) // I sing in Bangla
 ```
 
 # CLI
