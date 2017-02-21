@@ -1,23 +1,23 @@
-# google-translate-go
+# go-google-translate
 
 **Do you want to use google translator API?** API is not free anymore. But you can translate 1000 words per day free. And then may be this project can help you to translate unlimited text from one language to another using Google Translator.
 
 # Overview
 
-`google-translate-go` provides a `go` package to translate using Google Translator by parsing HTML.  This library can be used to translate from any language to any other. 
+`go-google-translate` provides a `go` package to translate using Google Translator by parsing HTML.  This library can be used to translate from any language to any other.
 
 In **addition** this library provides a [cli](#cli) to translate text via console.
 
 # Installation
 
 ```sh
-$ go get -u -v github.com/aerokite/google-translate-go/...
+$ go get -u -v github.com/aerokite/go-google-translate/...
 ```
 
 # Usage
 ```go
 import (
-	translate "github.com/aerokite/google-translate-go/pkg"
+	translate "github.com/aerokite/go-google-translate/pkg"
 )
 
 // request struct
@@ -42,8 +42,8 @@ Command line interface to translate text using command line.
 ## Install
 
 ```sh
-$ go get -u -v github.com/aerokite/google-translate-go/cmd/gopret
-$ go install github.com/aerokite/google-translate-go/cmd/gopret
+$ go get -u -v github.com/aerokite/go-google-translate/cmd/gopret
+$ go install github.com/aerokite/go-google-translate/cmd/gopret
 ```
 
 ## Usages

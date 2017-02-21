@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/aerokite/google-translate-go/pkg"
+	"github.com/aerokite/go-google-translate/pkg"
 	"github.com/spf13/cobra"
 )
 
