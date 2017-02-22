@@ -3,9 +3,10 @@ package pkg
 import (
 	"errors"
 	"fmt"
-	"github.com/aerokite/go-google-translate/pkg/client"
 	"regexp"
 	"strings"
+
+	"github.com/aerokite/go-google-translate/pkg/client"
 )
 
 type TranslateRequest struct {

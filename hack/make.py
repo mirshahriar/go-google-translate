@@ -11,8 +11,8 @@ def call(cmd, stdin=None, cwd=ROOT):
     subprocess.call([expandvars(cmd)], shell=True, stdin=stdin, cwd=cwd)
 
 def fmt():
-    call('goimports -w .')
-    call('go fmt ./...')
+    call('goimports -w ../.')
+    call('gofmt -s -w ../.')
 
 def compile():
     call('go install ./...')
