@@ -1,3 +1,5 @@
+<meta name='keywords' content='google translate, go translate, translator, bangla to english, gopret'>
+
 # go-google-translate
 
 **Do you want to use google translator API?** API is not free anymore. But you can translate 1000 words per day free. And then may be this project can help you to translate unlimited text from one language to another using Google Translator.
