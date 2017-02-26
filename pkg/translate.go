@@ -15,7 +15,7 @@ type TranslateRequest struct {
 	Text       string
 }
 
-func Translate(req TranslateRequest) (string, error) {
+func Translate(req *TranslateRequest) (string, error) {
 	config := &client.Config{
 		Source: req.SourceLang,
 		Target: req.TargetLang,

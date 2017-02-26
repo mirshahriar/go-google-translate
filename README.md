@@ -16,23 +16,30 @@ $ go get -u -v github.com/aerokite/go-google-translate/...
 
 # Usage
 ```go
+package any
+
 import (
-	trans "github.com/aerokite/go-google-translate/pkg"
+        "fmt"
+        "log"
+        "os"
+
+        trans "github.com/aerokite/go-google-translate/pkg"
 )
 
-// request struct
-req := &trans.TranslateRequest{
-  SourceLang: "bn",
-  TargetLang: "en",
-  Text:       "আমি বাংলায় গান গাই",
+func main(){
+        // request struct
+        req := &trans.TranslateRequest{
+                SourceLang: "bn",
+                TargetLang: "en",
+                Text:       "আমি বাংলায় গান গাই",
+        }
+        // translate
+        translated, err := trans.Translate(req)
+        if err != nil {
+                log.Fatalln(err)
+        }
+        fmt.Println(translated) // I sing in Bangla
 }
-// translate
-translatedText, err := trans.Translate(req)
-if err != nil {
-  os.Stderr.WriteString("Failed to translate text, error" + err.Error())
-}
-
-fmt.Println(translatedText) // I sing in Bangla
 ```
 
 # CLI
@@ -49,7 +56,7 @@ $ go install github.com/aerokite/go-google-translate/cmd/gopret
 ## Usages
 
 ```sh
-$ gopret --sl bn --tl en --text "আমি বাংলায় গান গাই"
+$ gopret translate --sl bn --tl en --text "আমি বাংলায় গান গাই"
 I sing in Bangla
 ```
 
