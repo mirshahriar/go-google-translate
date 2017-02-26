@@ -18,29 +18,28 @@ $ go get -u -v github.com/aerokite/go-google-translate/...
 
 # Usage
 ```go
-package any
+package main
 
 import (
-        "fmt"
-        "log"
-        "os"
+	"fmt"
+	"log"
 
-        trans "github.com/aerokite/go-google-translate/pkg"
+	trans "github.com/aerokite/go-google-translate/pkg"
 )
 
-func main(){
-        // request struct
-        req := &trans.TranslateRequest{
-                SourceLang: "bn",
-                TargetLang: "en",
-                Text:       "আমি বাংলায় গান গাই",
-        }
-        // translate
-        translated, err := trans.Translate(req)
-        if err != nil {
-                log.Fatalln(err)
-        }
-        fmt.Println(translated) // I sing in Bangla
+func main() {
+	// request struct
+	req := &trans.TranslateRequest{
+		SourceLang: "bn",
+		TargetLang: "en",
+		Text:       "আমি বাংলায় গান গাই",
+	}
+	// translate
+	translated, err := trans.Translate(req)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	fmt.Println(translated) // I sing in Bangla
 }
 ```
 
